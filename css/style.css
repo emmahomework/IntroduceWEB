@@ -426,6 +426,10 @@ body{
     margin-bottom: 35px;
 }
 
+.introduce div{
+    padding-top: 35px;
+}
+
 /*---------------頁尾-----------------*/
 footer{
     background-image: url(../img/img-Looper-bg.png);
