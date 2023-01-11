@@ -1,0 +1,286 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*--------css reset----------*/
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrap{
+    width: 1024px;
+    margin: 0 auto;
+    background-color: #fafafa;
+}
+
+.top-info{
+    background: url(../img/img-headerShape.png) no-repeat;
+    height: 274px;
+    display: flex;
+    padding: 125px 326px 0 135px;
+    margin-bottom: 130px;
+}
+
+.person{
+    text-align: center;
+    margin-right: 136px;
+}
+
+.person h1{
+    font-size: 42px;
+    margin: 20px 0;
+    color:#000;
+}
+
+.person p{
+    color:#4A4A4A;
+}
+
+.person h1 + p{
+    margin-bottom: 16px;
+}
+
+.basic-info li{
+    color:#fff;
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+/*-----------用偽元素做小圖示----------*/
+.location::before{
+    content: url(../img/Icon-location.png);
+    margin-right: 15px;
+    vertical-align: middle;
+
+}
+
+.mail::before{
+    content: url(../img/Icon-mail.png);
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
+.github::before{
+    content: url(../img/icon-github.png);
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
+/*-----------三個網路技能----------*/
+.skills h2, .experience h2{
+    font-size: 24px;
+    text-align: center;
+    color:#1736DC;
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+
+.skills > ul{
+    display: flex;
+    margin: 0 68px 65px;
+    justify-content: space-between;
+}
+
+.skills h3{
+    color:#4A4A4A;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/*--------圖片在div中置中的方法------*/
+.skills img{
+    display: block;
+    margin: auto;
+    margin-bottom: 28px;
+}
+/*--------圖片在div中置中的方法------*/
+
+.skill-1 ,.skill-2, .skill-3{
+    width: 220px;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+    padding: 33px 32px 27px;
+}
+
+.skill-1-list , .skill-2-list, .skill-3-list{
+    color:#4A4A4A;
+    font-size: 10px;
+    line-height: 14px;
+    list-style:disc;
+}
+
+.skill-1{
+    border-bottom: 6px solid #F58D23;
+}
+
+.skill-2{
+    border-bottom: 6px solid #539E43;
+}
+
+.skill-3{
+    border-bottom: 6px solid #6762A6;
+}
+
+/*------------經歷------------*/
+.experience li{
+    width: 234px;
+    border-radius: 10px;
+    border: 1px solid #FB56BF;
+    background: #fff;
+    padding: 12px;
+    position: relative;
+}
+
+.experience li::after{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: #D8D8D8;
+    top: 0;
+}
+
+.experience li:nth-child(odd)::after{
+    right: -27px;
+    z-index: -10;
+}
+
+.experience li:nth-child(even)::after{
+    left: -27px;
+    z-index: -10;
+}
+
+.experience ul{
+    width: 570px;
+    margin: 0 auto;
+}
+
+.experience li:nth-child(odd){
+    text-align: right;
+    float: left;
+}
+
+.experience li:nth-child(even){
+    float: right;
+    transform: translateY(85px);
+    margin-bottom: 160px;
+}
+
+.date{
+    color:#4A4A4A;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.experience li h3{
+    color:#8A1737;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.53px;
+    margin-bottom: 15px;
+}
+
+.company{
+    font-size: 12px;
+    color: #4A4A4A;
+    letter-spacing: 0.53px;
+    margin-bottom: 15px;
+}
+
+.experience li P{
+    font-size: 10px;
+    color: #9B9B9B;
+    letter-spacing: 0.44px;
+    line-height: 18px;
+}
+
+.hidden-1{
+    position: relative;
+    margin-bottom: 210px;
+    
+}
+
+.hidden-1::before{
+    content: "";
+    position: absolute;
+    background-image: url(../img/dot-start.png);
+    width: 32px;
+    height: 37px;
+    right: -42PX;
+    top:0px ;
+}
+
+.experience-left{
+    position: relative;
+}
+
+.experience-left::before{
+    content: "";
+    position: absolute;
+    background-image: url(../img/dot-timeItem.png);
+    width: 24px;
+    height: 28px;
+    right: -38PX;
+    top:0px ;
+}
+
+.experience-right{
+    position: relative;
+}
+
+.experience-right::before{
+    content: "";
+    position: absolute;
+    background-image: url(../img/dot-timeItem.png);
+    width: 24px;
+    height: 28px;
+    left: -38PX;
+    top:0px ;
+}
